@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>La Historia del Toyota Supra y su Cultura de Modificación</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>La Historia del Toyota Supra y su Cultura de Modificación</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="supra.html">Toyota Supra</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Origen del Toyota Supra</h2>
+      <p>
+        El Toyota Supra nació en 1978 como una versión deportiva del Toyota Celica. Conocido inicialmente como Toyota Celica Supra, se distinguía por tener un motor más grande y un enfoque hacia la potencia y el confort. A lo largo de los años, evolucionó hasta convertirse en uno de los autos más icónicos del mundo del tuning y las carreras callejeras.
+      </p>
+    </section>
+    <section>
+      <h2>Generaciones del Supra</h2>
+      <ul>
+        <li><strong>Primera generación (1978-1981):</strong> Inspirado en el Celica, pero con un motor en línea de seis cilindros.</li>
+        <li><strong>Segunda generación (1981-1986):</strong> Más deportivo y agresivo, comenzando a atraer a entusiastas del rendimiento.</li>
+        <li><strong>Tercera generación (1986-1992):</strong> Separación definitiva del Celica. Nace el Supra como lo conocemos, con motores turbo.</li>
+        <li><strong>Cuarta generación (1993-2002):</strong> El legendario MK4, impulsado por el motor 2JZ-GTE, famoso por soportar potencias extremas.</li>
+        <li><strong>Quinta generación (2019-presente):</strong> El Supra regresa en colaboración con BMW, manteniendo la esencia pero con tecnología moderna.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>¿Quién fue el primero en modificarlos?</h2>
+      <p>
+        Aunque no hay un nombre exacto de la primera persona que modificó un Supra, la cultura del tuning comenzó a popularizarse en Japón durante los años 80 y 90 con el movimiento JDM (Japanese Domestic Market).
+        Los bosozoku y posteriormente los equipos de drift fueron pioneros en modificar autos japoneses, incluyendo el Supra. En Estados Unidos, la fiebre por modificarlo explotó en los 2000 gracias a películas como Rápido y Furioso, donde el MK4 naranja de Brian O’Conner se volvió un ícono.
+      </p>
+    </section>
+    <section>
+      <h2>¿Qué opina la gente hoy en día?</h2>
+      <ul>
+        <li>Un clásico japonés legendario, especialmente el MK4 por su motor 2JZ.</li>
+        <li>Un coche con alma tuner, ideal para proyectos personalizados.</li>
+        <li>La quinta generación (MK5) ha generado opiniones divididas:
+          <ul>
+            <li>A algunos les encanta su diseño moderno y la tecnología.</li>
+            <li>Otros lo critican por la colaboración con BMW, diciendo que “ya no es un Supra puro”.</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section class="opinion-personal">
+      <h2>Mi opinión personal</h2>
+      <blockquote>
+        Para mí, el Supra es más que un auto: es una leyenda viva del automovilismo y la cultura tuning. Me encanta cómo ha evolucionado sin perder su esencia deportiva. El MK4 es mi favorito por su brutalidad y capacidad de modificación, pero también reconozco que el MK5 mantiene el nombre vivo en una era de coches más tecnológicos.<br>
+        <strong>En resumen:</strong> el Supra no es solo un coche, es un símbolo de pasión, velocidad y creatividad.
+      </blockquote>
+    </section>
+  </main>
+</body>
+</html>
