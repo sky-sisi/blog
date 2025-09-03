@@ -7,20 +7,27 @@
 </head>
 <body>
   <header>
-    <h1>Bienvenido a mi blog</h1>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="supra.html">Toyota Supra</a>
-    </nav>
-    <div class="spotify">
-      <h2>Mi Playlist Favorita</h2>
-      <!-- Reemplaza TU_PLAYLIST_ID por el ID de tu playlist de Spotify si quieres -->
-      <iframe style="border-radius:12px"
-        src="https://open.spotify.com/embed/playlist/TU_PLAYLIST_ID"
-        width="100%" height="152" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <div class="navbar">
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="supra.html">Toyota Supra</a>
+      </nav>
     </div>
+    <h1>Bienvenido a mi blog</h1>
+    <p class="subtitulo">Un espacio para compartir mis pasiones, opiniones y buena música.</p>
   </header>
   <main>
+    <section class="spotify">
+      <h2>Mi Playlist Favorita</h2>
+      <!-- Botón para abrir en nueva pestaña -->
+      <a href="https://open.spotify.com/playlist/5FENNkzgpjWp05TbET23Lz" target="_blank" class="btn-spotify">
+        🎵 Escuchar Playlist en Spotify mientras navegas
+      </a>
+      <!-- Botón para abrir pop-up flotante -->
+      <button class="btn-spotify" onclick="abrirPopupSpotify()">
+        🎶 Abrir reproductor flotante
+      </button>
+    </section>
     <div class="post">
       <h2>Título del post 1</h2>
       <p>Este es el contenido de tu primer post. ¡Escribe lo que quieras!</p>
@@ -30,5 +37,17 @@
       <p>Otro post aquí. Puedes copiar y pegar el bloque para agregar más posts.</p>
     </div>
   </main>
+  <footer>
+    <p>Hecho por sky-sisi &copy; 2025</p>
+  </footer>
+  <script>
+    function abrirPopupSpotify() {
+      window.open(
+        "https://open.spotify.com/embed/playlist/5FENNkzgpjWp05TbET23Lz",
+        "SpotifyPopup",
+        "width=420,height=580,resizable=yes"
+      );
+    }
+  </script>
 </body>
 </html>
