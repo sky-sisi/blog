@@ -95,25 +95,72 @@ main {
   color: #fffbe6;
 }
 
-.post {
-  background: #fffbe6;
+.blog-pages {
+  margin-top: 48px;
   padding: 24px;
-  margin-bottom: 28px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px #8b735522;
+  background: #f8f5e8;
+  border-radius: 16px;
   border: 1px solid #c2b280;
+  box-shadow: 0 2px 8px #c2b28022;
 }
 
-h2 {
+.blog-pages h2 {
   color: #8b7355;
-  font-size: 1.3rem;
-  margin-bottom: 10px;
+  font-size: 1.6rem;
+  margin-bottom: 24px;
   font-family: 'Georgia', serif;
 }
 
-p {
+.page-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.page-card {
+  background: #fffbe6;
+  border-radius: 12px;
+  border: 1px solid #c2b280;
+  box-shadow: 0 2px 8px #c2b28017;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-title {
+  color: #8b7355;
+  font-size: 1.15rem;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.page-date {
   color: #3a3a2c;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
+  font-family: 'Georgia', serif;
+}
+
+.btn-page {
+  background: #c2b280;
+  color: #fffbe6;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 2px 6px #8b735522;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn-page:hover {
+  background: #8b7355;
+  color: #fffbe6;
 }
 
 footer {
