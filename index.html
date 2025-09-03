@@ -18,19 +18,14 @@
   <main>
     <section class="spotify">
       <h2>Mi Playlist Favorita</h2>
-      <!-- Botón para abrir en nueva pestaña -->
       <a href="https://open.spotify.com/playlist/5FENNkzgpjWp05TbET23Lz" target="_blank" class="btn-spotify">
-        🎵 Escuchar Playlist en Spotify mientras navegas
+        🎵 Escuchar en Spotify
       </a>
-      <!-- Botón para abrir pop-up flotante -->
-      <button class="btn-spotify" onclick="abrirPopupSpotify()">
-        🎶 Abrir reproductor flotante
-      </button>
+      <p class="nota">¡Abre la playlist y sigue navegando por el blog sin perder la música!</p>
     </section>
     <section class="blog-pages">
       <h2>Páginas del Blog</h2>
       <div class="page-list">
-        <!-- Aquí puedes agregar más páginas fácilmente. Solo copia el bloque "page-card". -->
         <div class="page-card">
           <div>
             <span class="page-title">Toyota Supra: Historia y Cultura</span>
@@ -38,29 +33,11 @@
           </div>
           <a href="supra.html" class="btn-page">Ver página</a>
         </div>
-        <!-- Ejemplo para agregar otra página:
-        <div class="page-card">
-          <div>
-            <span class="page-title">Mi experiencia en el mundo gamer</span>
-            <span class="page-date">Publicado: 2025-09-03</span>
-          </div>
-          <a href="gamer.html" class="btn-page">Ver página</a>
-        </div>
-        -->
       </div>
     </section>
   </main>
   <footer>
-    <p>Hecho por sky-sisi &copy; 2025</p>
+    <p>Hecho por <strong>sky-sisi</strong> &copy; 2025</p>
   </footer>
-  <script>
-    function abrirPopupSpotify() {
-      window.open(
-        "https://open.spotify.com/embed/playlist/5FENNkzgpjWp05TbET23Lz",
-        "SpotifyPopup",
-        "width=420,height=580,resizable=yes"
-      );
-    }
-  </script>
 </body>
 </html>
