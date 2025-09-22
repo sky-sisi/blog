@@ -2,53 +2,67 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nim Mental Files</title>
+  <meta name="description" content="Conceptualización de mis ideas en un blog, donde leerás mi opinión sobre diversos temas y, además, podrás aprender cosas nuevas.">
+  <meta property="og:title" content="Nim Mental Files">
+  <meta property="og:description" content="Un blog sin rumbo fijo sobre todo lo que me apasiona.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.nimmentalfiles.com/og-image.jpg">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/blogger.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Nim Mental Files</h1>
+  <header role="banner">
+    <h1 tabindex="0">Nim Mental Files</h1>
     <p class="subtitulo">
       Conceptualización de mis ideas en un blog, donde leerás mi opinión sobre diversos temas y, además, podrás aprender cosas nuevas.
     </p>
   </header>
   <main>
-    <section class="spotify">
-      <h2>Mi Playlist</h2>
-      <a href="https://open.spotify.com/playlist/5FENNkzgpjWp05TbET23Lz" target="_blank" class="btn-spotify">
+    <section class="spotify" aria-labelledby="spotify-title">
+      <h2 id="spotify-title">Mi Playlist</h2>
+      <a href="https://open.spotify.com/playlist/5FENNkzgpjWp05TbET23Lz" target="_blank" rel="noopener" class="btn-spotify" aria-label="Escuchar mi playlist de Spotify (se abre en nueva pestaña)">
         🎵 Escuchar en Spotify
       </a>
       <p class="nota">¡Abre la playlist y sigue navegando por el blog sin perder la música!</p>
     </section>
-    <section class="blog-pages">
-      <h2>Nim´s Archives</h2>
+    <section class="blog-pages" aria-labelledby="archives-title">
+      <h2 id="archives-title">Nim´s Archives</h2>
       <div class="page-list">
-        <div class="page-card">
+        <div class="page-card" tabindex="0" aria-label="Página Toyota Supra: Historia y Cultura">
           <span class="page-title">Toyota Supra: Historia y Cultura</span>
           <span class="page-date">Publicado: 2025-09-02</span>
           <div class="page-btn-wrap">
-            <a href="supra.html" class="btn-page">Ver página</a>
+            <a href="supra.html" class="btn-page" aria-label="Ver página Toyota Supra: Historia y Cultura">Ver página</a>
           </div>
         </div>
-        <div class="page-card">
+        <div class="page-card" tabindex="0" aria-label="Página The K-Pop Warriors: A Journey of Music and Power">
           <span class="page-title">The K-Pop Warriors: A Journey of Music and Power</span>
           <span class="page-date">Publicado: 2025-09-03</span>
           <div class="page-btn-wrap">
-            <a href="kpop-warriors.html" class="btn-page">Ver página</a>
+            <a href="kpop-warriors.html" class="btn-page" aria-label="Ver página The K-Pop Warriors: A Journey of Music and Power">Ver página</a>
+          </div>
+        </div>
+        <div class="page-card" tabindex="0" aria-label="Página Depresión y sus variantes">
+          <span class="page-title">Depresión y sus variantes</span>
+          <span class="page-date">Publicado: 2025-09-22</span>
+          <div class="page-btn-wrap">
+            <a href="depression.html" class="btn-page" aria-label="Ver página Depresión y sus variantes">Ver página</a>
           </div>
         </div>
       </div>
     </section>
   </main>
-  <footer>
+  <footer role="contentinfo">
     <p>Hecho por <strong>nim.png</strong> &copy; 2025</p>
     <div class="social-links">
-      <a href="https://www.tiktok.com/@nim.png" target="_blank" class="btn-social tiktok">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok" class="icon-social">
+      <a href="https://www.tiktok.com/@nim.png" target="_blank" rel="noopener" class="btn-social tiktok" aria-label="TikTok de nim.png (se abre en nueva pestaña)">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok" class="icon-social" loading="lazy">
         TikTok
       </a>
-      <a href="https://www.instagram.com/biyin777" target="_blank" class="btn-social instagram">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" class="icon-social">
+      <a href="https://www.instagram.com/biyin777" target="_blank" rel="noopener" class="btn-social instagram" aria-label="Instagram de nim.png (se abre en nueva pestaña)">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" class="icon-social" loading="lazy">
         Instagram
       </a>
     </div>
