@@ -10,6 +10,7 @@
   --footer-text: #fff;
 }
 
+/* Base / layout */
 html {
   scroll-behavior: smooth;
 }
@@ -60,6 +61,7 @@ header {
   outline: 2px solid var(--accent);
 }
 
+/* Headings */
 h1, h2 {
   font-family: 'Montserrat', Arial, sans-serif;
 }
@@ -79,6 +81,7 @@ h1 {
   font-weight: 500;
 }
 
+/* Main container */
 main {
   margin: 0 auto;
   max-width: 800px;
@@ -88,6 +91,7 @@ main {
   align-items: center;
 }
 
+/* Spotify card */
 .spotify {
   background: var(--card-bg);
   border-radius: 14px;
@@ -138,6 +142,7 @@ main {
   margin-top: 6px;
 }
 
+/* Blog pages/cards */
 .blog-pages {
   margin-top: 30px;
   padding: 24px 18px;
@@ -441,6 +446,7 @@ footer strong {
   display: block;
   box-sizing: border-box;
   background: transparent;
+  animation: pageFadeIn 420ms ease both;
 }
 
 /* Contenedor principal */
@@ -457,7 +463,10 @@ footer strong {
   padding: 20px;
   box-shadow: 0 10px 30px rgba(10,20,30,0.06);
   margin-bottom: var(--gap);
+  transform-origin: top center;
+  transition: transform 360ms cubic-bezier(.2,.9,.3,1), box-shadow 250ms;
 }
+#dear-insanity .hero:hover { transform: translateY(-4px) scale(1.002); box-shadow: 0 14px 40px rgba(10,20,30,0.08); }
 
 #dear-insanity .hero-grid{
   display: grid;
@@ -471,7 +480,10 @@ footer strong {
   border-radius: 8px;
   display: block;
   box-shadow: 0 8px 26px rgba(6,20,40,0.08);
+  transform-origin: center;
+  transition: transform 420ms cubic-bezier(.2,.9,.3,1), filter 360ms;
 }
+#dear-insanity .cover img:hover { transform: scale(1.02) rotate(-0.6deg); filter: brightness(1.03) saturate(1.05); }
 
 #dear-insanity .meta h1{
   margin: 0;
@@ -492,7 +504,9 @@ footer strong {
   padding: 8px 12px;
   border-radius: 8px;
   font-weight: 600;
+  transition: transform 180ms ease, box-shadow 180ms ease;
 }
+#dear-insanity .meta .links a:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
 
 /* Table of contents */
 #dear-insanity .toc{
@@ -511,7 +525,9 @@ footer strong {
   padding: 18px;
   border-radius: 10px;
   box-shadow: 0 6px 20px rgba(10,20,30,0.04);
+  transition: transform 220ms ease, box-shadow 220ms ease;
 }
+#dear-insanity .card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(10,20,30,0.06); }
 
 /* Tracklist */
 #dear-insanity .tracklist{
@@ -522,7 +538,9 @@ footer strong {
   padding: 8px;
   border-radius: 8px;
   background: linear-gradient(180deg,#fff,#fffdf9);
+  transition: transform 180ms ease, box-shadow 180ms ease;
 }
+#dear-insanity .tracklist li:hover { transform: translateX(6px); box-shadow: 0 8px 22px rgba(0,0,0,0.04); }
 
 /* Songs */
 #dear-insanity .song{
@@ -531,10 +549,12 @@ footer strong {
   border-left: 4px solid var(--accent);
   border-radius: 8px;
   background: linear-gradient(180deg,#fff,#fffef6);
+  transition: transform 160ms ease, box-shadow 160ms ease;
 }
+#dear-insanity .song:hover{ transform: translateY(-4px) rotate(-0.2deg); box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
 #dear-insanity .song-summary{ margin: 6px 0 10px 0; color: #2e596d; font-weight:500; }
 
-/* details summary styling */
+/* details summary + animated body */
 #dear-insanity details summary{
   cursor: pointer;
   font-weight: 600;
@@ -543,10 +563,50 @@ footer strong {
   outline: none;
 }
 #dear-insanity details[open] summary{ color: #0f3b52; }
+
+/* wrap details content to animate height/opacity */
+#dear-insanity details .detail-body{
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: max-height 320ms cubic-bezier(.2,.9,.3,1), opacity 260ms ease, transform 260ms ease;
+}
+#dear-insanity details[open] .detail-body{
+  max-height: 600px; /* enough for content */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* style paragraphs inside details */
 #dear-insanity details p, #dear-insanity details pre{ margin: 10px 0; color: #244a59; }
 
 /* Footer / hints */
 #dear-insanity .foot p{ margin: 6px 0; color: #244a59; }
+
+/* Utility button within this page scope */
+#dear-insanity .btn {
+  display:inline-block;
+  padding:8px 12px;
+  border-radius:8px;
+  text-decoration:none;
+  background:var(--accent);
+  color:#fff;
+  font-weight:600;
+}
+
+/* subtle keyframes */
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes floatUp {
+  from { transform: translateY(8px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* small accessibility helpers */
+#dear-insanity a:focus { outline: 3px dashed rgba(197,111,0,0.28); outline-offset: 3px; }
 
 /* Responsive */
 @media (max-width: 900px){
@@ -559,13 +619,7 @@ footer strong {
   #dear-insanity .cover img{ max-width: 240px; margin: 0 auto; }
 }
 
-/* Optional: utilidades que pueden ser útiles en todo el sitio (si ya existen, ignora) */
-#dear-insanity .btn {
-  display:inline-block;
-  padding:8px 12px;
-  border-radius:8px;
-  text-decoration:none;
-  background:var(--accent);
-  color:#fff;
-  font-weight:600;
+/* small print: reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; transform: none !important; }
 }
