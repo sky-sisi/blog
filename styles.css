@@ -422,3 +422,150 @@ footer strong {
     padding: 8px 8px;
   }
 }
+
+/* =========================================================
+   Estilos específicos para la página "Dear. Insanity..."
+   Scoped bajo #dear-insanity para evitar romper el resto
+   ========================================================= */
+
+#dear-insanity {
+  --page-max: 1100px;
+  --card-bg: #ffffff;
+  --muted: #123b4f;
+  --accent: #c56f00;
+  --soft: #fdf7ef;
+  --radius: 12px;
+  --gap: 18px;
+  --text: #163243;
+  padding: 28px;
+  display: block;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+/* Contenedor principal */
+#dear-insanity .container{
+  width: 100%;
+  max-width: var(--page-max);
+  margin: 0 auto;
+}
+
+/* Hero */
+#dear-insanity .hero{
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), var(--soft));
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(10,20,30,0.06);
+  margin-bottom: var(--gap);
+}
+
+#dear-insanity .hero-grid{
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+#dear-insanity .cover img{
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 8px 26px rgba(6,20,40,0.08);
+}
+
+#dear-insanity .meta h1{
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.6rem;
+}
+#dear-insanity .meta .artist{
+  margin: 6px 0;
+  color: #2b5b6f;
+}
+#dear-insanity .meta .links a{
+  display: inline-block;
+  margin-right: 8px;
+  margin-top: 10px;
+  text-decoration: none;
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Table of contents */
+#dear-insanity .toc{
+  background: transparent;
+  margin-bottom: var(--gap);
+  color: #2b4f61;
+}
+#dear-insanity .toc ol{ margin: 6px 0 0 20px; }
+
+/* Section common */
+#dear-insanity .section{
+  margin-bottom: var(--gap);
+}
+#dear-insanity .card{
+  background: var(--card-bg);
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(10,20,30,0.04);
+}
+
+/* Tracklist */
+#dear-insanity .tracklist{
+  margin: 10px 0 0 0;
+}
+#dear-insanity .tracklist li{
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: 8px;
+  background: linear-gradient(180deg,#fff,#fffdf9);
+}
+
+/* Songs */
+#dear-insanity .song{
+  margin: 12px 0;
+  padding: 12px;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  background: linear-gradient(180deg,#fff,#fffef6);
+}
+#dear-insanity .song-summary{ margin: 6px 0 10px 0; color: #2e596d; font-weight:500; }
+
+/* details summary styling */
+#dear-insanity details summary{
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--muted);
+  list-style: none;
+  outline: none;
+}
+#dear-insanity details[open] summary{ color: #0f3b52; }
+#dear-insanity details p, #dear-insanity details pre{ margin: 10px 0; color: #244a59; }
+
+/* Footer / hints */
+#dear-insanity .foot p{ margin: 6px 0; color: #244a59; }
+
+/* Responsive */
+@media (max-width: 900px){
+  #dear-insanity .hero-grid{ grid-template-columns: 140px 1fr; }
+}
+@media (max-width: 640px){
+  #dear-insanity { padding: 14px 10px; }
+  #dear-insanity .hero-grid{ grid-template-columns: 1fr; text-align: center; }
+  #dear-insanity .meta .links a{ margin: 8px 6px 0 6px; }
+  #dear-insanity .cover img{ max-width: 240px; margin: 0 auto; }
+}
+
+/* Optional: utilidades que pueden ser útiles en todo el sitio (si ya existen, ignora) */
+#dear-insanity .btn {
+  display:inline-block;
+  padding:8px 12px;
+  border-radius:8px;
+  text-decoration:none;
+  background:var(--accent);
+  color:#fff;
+  font-weight:600;
+}
