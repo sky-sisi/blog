@@ -430,7 +430,7 @@ footer strong {
 
 /* =========================================================
    Estilos específicos para la página "Dear. Insanity..."
-   Scoped bajo #dear-insanity para evitar romper el resto
+   Scoped bajo #dear-insanity to avoid global collisions
    ========================================================= */
 
 #dear-insanity {
