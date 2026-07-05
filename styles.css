@@ -118,3 +118,94 @@ footer { text-align:center; color:var(--text-main); }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+
+/* ------------------ Fixes añadidas ------------------ */
+
+/* Box sizing global (más seguro para paddings/borders) */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Evita que imágenes y SVG grandes rompan el layout */
+img, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Footer: fondo y espaciado para que destaque y no sea afectado por imágenes */
+footer {
+  padding: 28px 18px;
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+}
+
+/* Contenedor de iconos sociales: centrado y ordenado */
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* Botones sociales */
+.btn-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--footer-text);
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: background 180ms ease, color 180ms ease;
+}
+.btn-social:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+/* Tamaño controlado para los iconos SVG (evita que sean gigantes) */
+.icon-social {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  flex: 0 0 22px;
+}
+
+/* Asegura que el texto y elementos del footer no se sitúen encima de imágenes muy grandes */
+footer img { vertical-align: middle; }
+
+/* Estilos para la lista de páginas (cards) para que no queden minúsculas */
+.page-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  width: 100%;
+  margin-top: 6px;
+  align-items: start;
+  justify-items: center;
+}
+
+/* Card interno (limita la anchura para que se vea bien en pantallas grandes) */
+.page-card {
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--card-bg);
+  border: 1px solid #E9E9E9;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+/* Títulos de página y fecha */
+.page-title { display:block; font-weight:700; color:var(--primary); margin-bottom:6px; }
+.page-date { display:block; font-size:0.85rem; color:#666; margin-bottom:8px; }
+
+@media (max-width: 420px) {
+  .btn-social { padding: 6px 8px; }
+  .icon-social { width: 18px; height: 18px; }
+  .page-card { padding: 10px; }
+}
